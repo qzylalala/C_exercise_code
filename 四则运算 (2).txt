@@ -1,0 +1,61 @@
+#include<stdio.h>
+int main(void)
+{
+    int t;
+    double x,y;
+    char a;
+    while(scanf("%d %lf %lf %c",&t,&x,&y,&a)!=EOF)
+    {
+        if(t==0)
+        {
+            if(a=='+')
+                printf("After if-else processing,the result is : %.2lf\n",x+y);
+            else if(a=='-')
+                printf("After if-else processing,the result is : %.2lf\n",x-y);
+            else if(a=='*')
+                printf("After if-else processing,the result is : %.2lf\n",x*y);
+            else if(a=='/')
+                printf("After if-else processing,the result is : %.2lf\n",x/y);
+            printf("\n");
+
+        }
+        if(t==1)
+        {
+            switch(a)
+            {
+            case '+':
+                printf("After switch processing,the result is : %.2lf\n",x+y);printf("\n");break;
+            case '-':
+                printf("After switch processing,the result is : %.2lf\n",x-y);printf("\n");break;
+            case '*':
+                printf("After switch processing,the result is : %.2lf\n",x*y);printf("\n");break;
+            case '/':
+                printf("After switch processing,the result is : %.2lf\n",x/y);printf("\n");break;
+            }
+        }
+        if(t==2)
+        {
+            if(a=='+')
+                printf("After if-else processing,the result is : %.2lf\n",x+y);
+            else if(a=='-')
+                printf("After if-else processing,the result is : %.2lf\n",x-y);
+            else if(a=='*')
+                printf("After if-else processing,the result is : %.2lf\n",x*y);
+            else if(a=='/')
+                {printf("After if-else processing,the result is : %.2lf\n",x/y);}
+            switch(a)
+            {
+            case '+':
+                printf("After switch processing,the result is : %.2lf\n",x+y);printf("\n");break;
+            case '-':
+                printf("After switch processing,the result is : %.2lf\n",x-y);printf("\n");break;
+            case '*':
+                printf("After switch processing,the result is : %.2lf\n",x*y);printf("\n");break;
+            case '/':
+                printf("After switch processing,the result is : %.2lf\n",x/y);printf("\n");break;
+            }
+
+        }
+    }
+return 0;
+    }

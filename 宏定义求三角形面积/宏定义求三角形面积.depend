@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1542805280 source:c:\users\lenovo\desktop\c语言作业\宏定义求三角形面积\main.c
+	<stdio.h>
+	<math.h>
+

@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main(void)
+{
+    int i=0,N;
+    char x;
+    scanf("%d",&N);
+    while(i<N)
+    {
+        getchar();
+        x=getchar();
+        if(x>='0'&&x<='9')
+            printf("%d\n",(x-'0'));
+        else if(x>='a'&&x<='f')
+            printf("%d\n",(x-'a'+10));
+        else if(x>='A'&&x<='F')
+            printf("%d\n",(x-'A'+10));
+        else
+            printf("%d\n",x);
+        i++;
+    }
+    return 0;
+}

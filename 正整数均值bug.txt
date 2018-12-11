@@ -1,0 +1,50 @@
+#include<stdio.h>
+int main()
+{
+    int n,t,i,j,x,num=0,number=0;
+    float s=0.0;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&t);
+        if(t==0)
+        {
+            for(j=1;j<=10;j++)
+            {
+                scanf("%d",&x);
+                if(x>0)
+                    {num++;
+                    s=s+x;}
+                else if (x<0)
+                    number++;
+                else
+                    ;
+            }
+            if(number==10)
+                continue;
+            else
+                printf("In \"continue\" way,numbers=%d,average=%.6f\n",num,s/num);
+            num=0;s=0;number=0;
+        }
+        else
+        {
+            for(j=1;j<=10;j++)
+            {
+                scanf("%d",&x);
+                if(x>0)
+                    {num++;
+                    s=s+x;}
+                else if(x<0)
+                    number++;
+                else
+                    ;
+            }
+            if(number==10)
+                ;
+            else
+                printf("In \"no continue\" way,numbers=%d,average=%.6f\n",num,s/num);
+            num=0;s=0;number=0;
+        }
+    }
+    return 0;
+}

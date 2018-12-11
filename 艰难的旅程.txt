@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+    unsigned short x,y,z,m,mask=(1<<15);
+    int N,i=0,j;
+    scanf("%d",&N);
+    while(i<N)
+    {
+        scanf("%hu",&x);
+        y=x>>12;
+        z=x<<12;
+        m=(~0<<4)&4095;
+        m=m&x;
+        x=m|y|z;
+        printf("%hu\n",x);
+        i++;
+    }
+    return 0;
+}

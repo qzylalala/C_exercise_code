@@ -1,0 +1,37 @@
+#include<stdio.h>
+enum Months
+{
+    January=31,March=31,April=30,May=31,June=30,
+    July=31,August=31,September=30,October=31,November=30,December=31
+}February;
+int main(void)
+{
+    int i,n,N,year;
+    int M[10];
+    scanf("%d",&N);
+    for(n=0;n<N;n++)
+        scanf("%d",&M[n]);
+    for(i=0;i<N;i++)
+    {
+        if((M[i]%4==0&&M[i]%100!=0)||M[i]%1000==0)
+            February=29;
+        else
+            February=28;
+        char *L[]={"January","February","March","April","May","June","July","August","Semtember","October","November","December"};
+        printf("%s,%d;",L[0],January);
+        printf("%s,%d;",L[1],February);
+        printf("%s,%d;",L[2],March);
+        printf("%s,%d;",L[3],April);
+        printf("%s,%d;",L[4],May);
+        printf("%s,%d;",L[5],June);
+        printf("%s,%d;",L[6],July);
+        printf("%s,%d;",L[7],August);
+        printf("%s,%d;",L[8],September);
+        printf("%s,%d;",L[9],October);
+        printf("%s,%d;",L[10],November);
+        printf("%s,%d;",L[11],December);
+        printf("\n");
+    }
+    return 0;
+
+}

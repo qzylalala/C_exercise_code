@@ -1,0 +1,41 @@
+#include<stdio.h>
+int sushu(int);
+int main()
+{
+    int n,i=0,x,m,L[100];
+    scanf("%d",&n);
+    while(i<n)
+    {
+        scanf("%d",&x);
+        L[i]=x;
+        i++;
+    }
+    for(i=0;i<n;i++)
+    {
+        x=L[i];
+        if(x==4)
+        {
+            printf("%d=%d+%d\n",4,2,2);
+        }
+         for(m=3;m<=x/2;m=m+2)
+        {
+            if(sushu(m))
+            {
+                if(sushu(x-m))
+                {
+                    printf("%d=%d+%d\n",x,m,x-m);
+                    break;
+                }
+            }
+        }
+    }
+    return 0;
+}
+int sushu(int i)
+{
+    int j;
+    if(i==2) return 1;
+    for(j=2;j<i;j++)
+            if(!(i%j)) return 0;
+    return 1;
+}

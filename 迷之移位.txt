@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<limits.h>
+int main()
+{
+    unsigned i,x,p,n,x1,x2,x3,x4,x5,X,M;
+    int m=sizeof(int)*CHAR_BIT;
+    int mask=1<<(m-1);
+    scanf("%d%d%d",&x,&p,&n);
+    M=x;
+    for(i=1;i<=m;++i)
+        {
+        putchar((x&mask)?'1':'0');
+        x<<=1;
+        if(!(i%CHAR_BIT)&&i<m)
+            putchar(' ');
+        }
+    printf("\n");
+    x1=x>>(n+p);x2=x<<(32-p);
+    x3=x1<<(n+p);x4=x2>>(32-p);
+    x5=(((~M)>>p)<<(32-n))>>(32-n-p);
+    X=(x3|x4)|(x5);
+    for(i=1;i<=m;++i)
+        {
+        putchar((X&mask)?'1':'0');
+        X<<=1;
+        if(!(i%CHAR_BIT)&&i<m)
+            putchar(' ');
+        }
+    printf("\n");
+    return 0;
+}
+

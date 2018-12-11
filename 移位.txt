@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+    int m,x,n,z,x1,x2,X;
+    m=sizeof(int);
+    scanf("%d%d",&x,&n);
+    if (m==2)
+    {
+        z=n%16;
+        x1=x>>z;
+        x2=x<<(16-z);
+        X=(x1|x2);
+        printf("%d",X);
+    }
+    else
+    {
+        z=n%32;
+        x1=x>>z;
+        x2=x<<(32-z);
+        X=(x1|x2);
+        printf("%d",X);
+    }
+    return 0;
+}

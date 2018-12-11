@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main(void)
+{
+    int A,B,C;
+    while(scanf("%d %d %d",&A,&B,&C)!=EOF)
+    {
+        if(A==B)
+            printf("A:%d\n",A);
+        else
+        {
+            if(A==C)
+                printf("A:%d\n",A);
+            else
+            {
+                if(B==C)
+                    printf("B:%d\n",B);
+                else
+                    {
+                    if((A>B&&B>C)||(C>B&&B>A))
+                      printf("B:%d\n",B);
+                    else if((C>A&&A>B)||(B>A&&A>C))
+                        printf("A:%d\n",A);
+                    else
+                        printf("C:%d\n",C);
+                    }
+            }
+        }
+    }
+    return 0;
+}

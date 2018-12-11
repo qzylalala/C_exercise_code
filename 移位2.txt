@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+    int i=0,j,N;
+    short x,y,z;
+    char L[100],M[100];
+    scanf("%d",&N);
+    while(i<N)
+    {
+        scanf("%hd",&x);
+        y=(x<<8)>>8;
+        z=x>>8;
+        L[i]=y;
+        M[i]=z;
+        i++;
+    }
+    for(j=0;j<N;j++)
+    {
+        printf("%c,",M[j]);
+        printf("%c\n",L[j]);
+    }
+    return 0;
+}
